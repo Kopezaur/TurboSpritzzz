@@ -140,6 +140,8 @@ GameObject:
   - component: {fileID: 54523551072347770}
   - component: {fileID: 65618154865894588}
   - component: {fileID: 64559875846653654}
+  - component: {fileID: 114836653515743256}
+  - component: {fileID: 114050867973960538}
   m_Layer: 0
   m_Name: YellowCar
   m_TagString: Untagged
@@ -720,6 +722,59 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114050867973960538
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654535741937546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1768714887, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TransformSyncMode: 3
+  m_SendInterval: 0.1
+  m_SyncRotationAxis: 7
+  m_RotationSyncCompression: 0
+  m_SyncSpin: 0
+  m_MovementTheshold: 0.001
+  m_VelocityThreshold: 0.0001
+  m_SnapThreshold: 5
+  m_InterpolateRotation: 1
+  m_InterpolateMovement: 1
+--- !u!114 &114836653515743256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1654535741937546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 372142912, guid: dc443db3e92b4983b9738c1131f555cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SceneId:
+    m_Value: 0
+  m_AssetId:
+    i0: 35
+    i1: 214
+    i2: 139
+    i3: 10
+    i4: 14
+    i5: 29
+    i6: 39
+    i7: 20
+    i8: 24
+    i9: 160
+    i10: 224
+    i11: 146
+    i12: 193
+    i13: 233
+    i14: 95
+    i15: 234
+  m_ServerOnly: 0
+  m_LocalPlayerAuthority: 1
 --- !u!114 &114952816034429242
 MonoBehaviour:
   m_ObjectHideFlags: 1
