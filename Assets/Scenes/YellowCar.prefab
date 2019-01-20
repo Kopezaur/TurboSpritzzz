@@ -120,6 +120,7 @@ GameObject:
   - component: {fileID: 4569077168183592}
   - component: {fileID: 20856070895848732}
   - component: {fileID: 81301650475688952}
+  - component: {fileID: 114949158491393132}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -266,7 +267,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1654535741937546}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 100, y: 100, z: 100}
+  m_LocalPosition: {x: 210.95378, y: 2.23, z: 168.34}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children:
   - {fileID: 4376002570846424}
@@ -775,6 +776,19 @@ MonoBehaviour:
     i15: 234
   m_ServerOnly: 0
   m_LocalPlayerAuthority: 1
+--- !u!114 &114949158491393132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1615433231832538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 614dc7f64d4e20e498444253ce0cb91a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTransform: {fileID: 0}
+  depth: -20
 --- !u!114 &114952816034429242
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -799,6 +813,9 @@ MonoBehaviour:
   maxSteerAngle: 45
   currentSpeed: 0
   maxBrakeTorque: 10000
+  mainCamera: {fileID: 0}
+  playerTransform: {fileID: 0}
+  depth: -20
 --- !u!146 &146596198318349724
 WheelCollider:
   m_ObjectHideFlags: 1

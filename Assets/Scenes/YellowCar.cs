@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class YellowCar : MonoBehaviour {
+public class YellowCar : NetworkBehaviour {
 
     public WheelCollider Rear_Right_Wheel;
     public WheelCollider Rear_Left_Wheel;
@@ -24,11 +25,28 @@ public class YellowCar : MonoBehaviour {
     private float Turn;
     private float Brake;
 
-   
+    public Camera mainCamera;
+    public Transform playerTransform;
+    public int depth = -20;
+
+
 
     void Start () {
-        
-     
+
+        // IF I'M THE PLAYER, STOP HERE (DON'T TURN MY OWN CAMERA OFF)
+        if (isLocalPlayer)
+        {
+            this.transform.GetChild(1).gameObject.GetComponent<Camera>().enabled = true;
+            return;
+        }
+        else
+        {
+            this.transform.GetChild(1).gameObject.GetComponent<Camera>().enabled = false;
+        }
+
+        // DISABLE CAMERA AND CONTROLS HERE (BECAUSE THEY ARE NOT ME)
+       // mainCamera.enabled = false;
+       // GameObject.Find("Main Camera").gameObject.transform.parent = transform;
 
     }
 	
@@ -82,7 +100,18 @@ public class YellowCar : MonoBehaviour {
         Rear_Right_Wheel.GetWorldPose(out rrv, out rrq);
         RR.transform.position = rrv;
         RR.transform.rotation = rrq;
+
+        if (playerTransform != null)
+        {
+            transform.position = playerTransform.position + new Vector3(0, 10, depth);
+        }
+
     }
 
-}
+    public void setTarget(Transform target)
+    {
+        playerTransform = target;
+    }
+
+    }
 
